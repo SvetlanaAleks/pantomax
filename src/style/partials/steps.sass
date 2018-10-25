@@ -1,16 +1,20 @@
 .steps
 	padding-top: 60px
 	background: url(../img/steps_back.png) no-repeat center bottom
-	position: relative
-	padding-bottom: 75px
-	position: relative
-	&::after
-		content: ''
-		display: block
-		position: absolute
-		bottom: 52px
-		left: 540px
-		+sprite($nut)
+	padding-bottom: 124px
+	.container
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -23px
+			left: 65px
+			+sprite($nut)
+		.steps__img
+			position: absolute
+			left: -95px
+			bottom: 6px
 	&__title
 		text-align: center
 		text-transform: uppercase
@@ -20,10 +24,6 @@
 		margin-bottom: 35px
 		.font
 			font-weight: normal
-	&__img
-		position: absolute
-		left: 375px
-		top: 155px
 .steps
 	&__list
 		display: flex
