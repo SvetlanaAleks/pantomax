@@ -1,0 +1,34 @@
+.advantages
+	color: $black-three
+	min-height: 400px
+	.container
+		padding-top: 33px
+		padding-bottom: 37px
+		padding-left: 40px
+		background-color: #ffffff
+		border-radius: 10px
+		position: relative
+		overflow: hidden
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			right: -76px
+			top: -30px
+			bottom: 0
+			+sprite($advantages_back)
+.content
+	width: 59%
+	&__title
+		font-size: 48px
+		text-transform: uppercase
+		font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+		font-weight: bold
+		margin-bottom: 30px
+	&__text
+		font-size: 17px
+		font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
+		line-height: 1.53
+		.bold
+			font-weight: bold
+			text-transform: uppercase
