@@ -1,0 +1,221 @@
+.header
+	padding-top: 27px
+	background: url(../img/header_back.png) no-repeat center top
+	background-size: contain
+	&__top
+		margin-bottom: 35px
+		.list
+			display: flex
+			align-items: center
+			&__item
+				color: $white-two
+				font-size: 18px
+				font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
+				margin-right: 30px
+				&--1, &--2
+					position: relative
+					&::after
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						top: 50%
+						transform: translateY(-50%)
+				&--1
+					padding-left: 35px
+					&::after
+						+sprite($icon1)
+				&--2
+					padding-left: 48px
+					&::after
+						+sprite($icon2)
+				&:first-of-type
+					margin-right: 88px
+				&:last-of-type
+					margin-right: 0
+		.bold
+			font-family: 'PTSans-Bold', Verdana, Geneva, Tahoma, sans-serif
+			font-size: 24px
+	&__bottom
+		.title
+			background: linear-gradient(to right, $light-khaki, $dark-tan), linear-gradient(to bottom, $dandelion, $dandelion)
+			font-size: 58px
+			color: $dandelion
+			font-weight: bold
+			background-clip: text
+			-webkit-text-fill-color: transparent
+			font-family: 'RobotoCondensed-Bold', Verdana, Geneva, Tahoma, sans-serif
+			margin-bottom: 28px
+			text-transform: uppercase
+		.cols
+			display: flex
+			justify-content: flex-start
+			.product
+				margin-right: 37px
+				max-width: 320px
+				width: auto
+				&__title
+					font-family: 'Roboto-Medium', Verdana, Geneva, Tahoma, sans-serif
+					font-size: 22px
+					font-weight: 500
+					margin-bottom: 19px
+			.list
+				&__item
+					font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
+					padding-left: 30px
+					position: relative
+					margin-bottom: 14px
+					padding-bottom: 16px
+					&:last-of-type
+						margin-bottom: 0
+						padding-bottom: 24px
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						bottom: 0
+						left: 0
+						width: 266px
+						height: 1px
+						background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.2) 15%,rgba(2255,255,255,.4) 50%, rgba(2255,255,255,.2) 85%,rgba(255,255,255,0) 100%)
+					&::after
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						top: 0
+						+sprite($bulit)
+			.percent-sale
+				width: auto
+				margin-right: 40px
+				text-align: center
+				.text
+					position: relative
+					top: 370px
+					font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+					font-size: 19px
+					padding-top: 104px
+					+sprite($sale)
+			.order
+				.timer
+					display: flex
+					margin-bottom: 30px
+					&__count
+						white-space: nowrap
+						margin-right: 9px
+						font-size: 50px
+						color: $black-three
+						font-family: 'PTSans-NarrowBold', Verdana, Geneva, Tahoma, sans-serif
+						font-weight: bold
+						.numb
+							padding: 1px 10px
+							background-color: #f6f6f6
+							border: solid 1px #ffffff
+							box-shadow: 0px 2px 3px 0 rgba(27, 27, 27, 0.55), inset 0px 1px 2px 0 rgba(255, 255, 255, 0.15)
+							display: inline-block
+							border-radius: 3.6px
+							position: relative
+							&::after
+								content: ''
+								display: block
+								position: absolute
+								top: 50%
+								left: 0
+								right: 0
+								transform: translateY(-50%)
+								border-bottom: 2px solid #cecece
+								box-shadow: 0px 1px 0 0 rgba(255, 255, 255, 0.1)
+							&:not(&:last-of-type)
+								margin-right: 6px
+							&--opacity
+								opacity: .7
+								&::after
+									z-index: -1
+					&__text
+						font-size: 19px
+						font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+	.form
+		max-width: 290px
+		border-radius: 10px
+		box-shadow: 0 0 40px 0 rgba(254, 213, 91, 0.25)
+		background-color: #ffffff
+		overflow: hidden
+		padding-bottom: 25px
+		text-align: center
+		&__header
+			padding: 20px
+			margin-bottom: 20px
+			text-align: left
+			+sprite($form_back)
+			.value
+				display: flex
+				.small
+					font-size: 18px
+					font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+				.price
+					font-size: 48px
+					&--small
+						font-size: 23.5px
+				.old
+					margin-right: 20px
+					color: rgba(255, 255, 255, 0.3)
+					.price
+						font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+				.new
+					.price
+						font-family: 'PTSans-NarrowBold', Verdana, Geneva, Tahoma, sans-serif
+		.input
+			width: 255px
+			height: 55px
+			padding-left: 15px
+			box-sizing: border-box
+			border-radius: 5px
+			border: solid 1px #e1e1e1
+			background-color: #f6f6f6
+			margin-bottom: 15px
+			+placeholder
+				font-size: 14px
+				font-family: 'OpenSans', Verdana, Geneva, Tahoma, sans-serif
+				color: #929292
+			&--tel
+				margin-bottom: 25px
+	.form
+		&__btn
+			color: #ffffff
+			text-transform: uppercase
+			line-height: 60px
+			font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+			font-size: 22px
+			width: 255px
+			box-shadow: 2.5px 4.3px 25px 0 rgba(250, 74, 27, 0.35)
+			border-radius: 5px
+			border: none
+			background: linear-gradient(to top, #d73f17, #fa4a1b)
+			margin-bottom: 22px
+			cursor: pointer
+			position: relative
+			overflow: hidden
+			padding-left: 53px
+			.arrow
+				position: absolute
+				width: 51px
+				left: 0
+				line-height: 60px
+				background-color: #b13412
+		.text
+			font-size: 15px
+			color: $black-three
+			font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+			padding-left: 25px
+			display: inline-block
+			position: relative
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				+sprite($case)
+	.fico-arr
+		font-size: 18px
