@@ -1,38 +1,30 @@
 .opinion
 	color: $black-three
-	position: relative
-	top: -55px
+	margin-top: -30px
 	.container
 		padding-top: 33px
 		padding-bottom: 37px
 		padding-left: 40px
-		background-color: #ffffff
+		background: #ffffff url('../img/opinion_back.png') no-repeat right center
+		background-size: auto 100%
 		border-radius: 10px
-		position: relative
 		overflow: hidden
-		&::after
-			content: ''
-			display: block
-			position: absolute
-			bottom: 0
-			right: 0
-			+sprite($opinion_back)
 		.content
-			position: relative
-			width: 67%
+			width: 62%
 			&__text
 				font-size: 16px
-			&::after
-				content: ''
-				display: block
-				position: absolute
-				top: 23px
-				left: -582px
-				transform: scale(.1)
-				+sprite($podpis)
 			&__text
 				margin-bottom: 20px
 				&:last-of-type
 					margin-bottom: 30px
-	.text
+	.sign
 		font-family: 'PTSans-BoldItalic', Verdana, Geneva, Tahoma, sans-serif
+		position: relative
+		margin-top: 30px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			+sprite($podpis)
+			right: 50px
+			top: -33px

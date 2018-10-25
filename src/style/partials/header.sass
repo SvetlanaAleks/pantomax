@@ -1,55 +1,70 @@
+.backgroundcliptext
+	.header
+		&__bottom
+			.title
+				background: linear-gradient(to right, $light-khaki, $dark-tan), linear-gradient(to bottom, $dandelion, $dandelion)
+				background-clip: text
+				-webkit-text-fill-color: transparent
+
+.no-backgroundcliptext
+	.header
+		&__bottom
+			.title
+				color: #bda65c
 .header
 	padding-top: 27px
 	background: url(../img/header_back.png) no-repeat center top
 	background-size: contain
 	&__top
 		margin-bottom: 35px
-		.list
-			display: flex
-			align-items: center
-			&__item
-				color: $white-two
-				font-size: 18px
-				font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
-				margin-right: 30px
-				&--1, &--2
-					position: relative
-					&::after
-						content: ''
-						display: block
-						position: absolute
-						left: 0
-						top: 50%
-						transform: translateY(-50%)
-				&--1
-					padding-left: 35px
-					&::after
-						+sprite($icon1)
-				&--2
-					padding-left: 48px
-					&::after
-						+sprite($icon2)
-				&:first-of-type
-					margin-right: 88px
-				&:last-of-type
-					margin-right: 0
+		.item
+			color: $white-two
+			font-size: 18px
+			font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
+			margin-right: 30px
+			display: inline-block
+			vertical-align: middle
+			a
+				display: inline-block
+			&--1, &--2
+				position: relative
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+			&--1
+				padding-left: 35px
+				&::after
+					+sprite($icon1)
+			&--2
+				padding-left: 52px
+				&::after
+					+sprite($icon2)
+			&:first-of-type
+				margin-right: 88px
+			&:last-of-type
+				margin-right: 0
 		.bold
 			font-family: 'PTSans-Bold', Verdana, Geneva, Tahoma, sans-serif
 			font-size: 24px
+
 	&__bottom
 		.title
-			background: linear-gradient(to right, $light-khaki, $dark-tan), linear-gradient(to bottom, $dandelion, $dandelion)
+			
 			font-size: 58px
 			color: $dandelion
 			font-weight: bold
-			background-clip: text
-			-webkit-text-fill-color: transparent
 			font-family: 'RobotoCondensed-Bold', Verdana, Geneva, Tahoma, sans-serif
 			margin-bottom: 28px
 			text-transform: uppercase
 		.cols
 			display: flex
-			justify-content: flex-start
+			.col
+				flex-grow: 1
+				flex-basis: 33.333%
 			.product
 				margin-right: 37px
 				max-width: 320px
@@ -62,7 +77,7 @@
 			.list
 				&__item
 					font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
-					padding-left: 30px
+					padding-left: 35px
 					position: relative
 					margin-bottom: 14px
 					padding-bottom: 16px
@@ -86,16 +101,24 @@
 						top: 0
 						+sprite($bulit)
 			.percent-sale
-				width: auto
 				margin-right: 40px
+				margin-bottom: 75px
 				text-align: center
+				align-self: flex-end
 				.text
-					position: relative
-					top: 370px
 					font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
 					font-size: 19px
 					padding-top: 104px
-					+sprite($sale)
+					position: relative
+					&::after
+						content: ''
+						display: block
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						margin: auto
+						+sprite($sale)
 			.order
 				.timer
 					display: flex
@@ -125,7 +148,7 @@
 								transform: translateY(-50%)
 								border-bottom: 2px solid #cecece
 								box-shadow: 0px 1px 0 0 rgba(255, 255, 255, 0.1)
-							&:not(&:last-of-type)
+							&:not(:last-of-type)
 								margin-right: 6px
 							&--opacity
 								opacity: .7
@@ -139,14 +162,15 @@
 		border-radius: 10px
 		box-shadow: 0 0 40px 0 rgba(254, 213, 91, 0.25)
 		background-color: #ffffff
-		overflow: hidden
 		padding-bottom: 25px
 		text-align: center
 		&__header
 			+sprite($form_back)
-			padding: 20px
-			margin-bottom: 20px
+			padding: 30px 15px 20px 20px
+			margin-bottom: 10px
 			text-align: left
+			position: relative
+			top: -10px
 			.value
 				display: flex
 				.small
@@ -157,10 +181,12 @@
 					&--small
 						font-size: 23.5px
 				.old
-					margin-right: 20px
-					color: rgba(255, 255, 255, 0.3)
+					margin-right: 30px
+					color: #845f55
 					.price
 						font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
+					.val
+						text-decoration: line-through
 				.new
 					.price
 						font-family: 'PTSans-NarrowBold', Verdana, Geneva, Tahoma, sans-serif
@@ -203,6 +229,8 @@
 				position: absolute
 				width: 51px
 				left: 0
+				top: 0
+				bottom: 0
 				line-height: 60px
 				background-color: #b13412
 		.text
