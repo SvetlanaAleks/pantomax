@@ -77,7 +77,7 @@ var config = {
 	tunnel: false,
 	host: 'localhost',
 	port: 9000,
-	logPrefix: "terraleads"
+	logPrefix: "pantomax"
 };
 
 gulp.task('html:build', function () {

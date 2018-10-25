@@ -10,18 +10,38 @@
 		border-radius: 10px
 		position: relative
 		overflow: hidden
+		+r(991)
+			background-position-x: 200px
+		+r(767)
+			padding: 250px 15px 25px
+			background-position: center top
+			background-size: contain
 .content
 	width: 59%
+	+r(1199)
+		width: 48%
+	+r(767)
+		width: 100%
 	&__title
 		font-size: 48px
 		text-transform: uppercase
 		font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
 		font-weight: bold
 		margin-bottom: 30px
+		+r(1199)
+			font-size: 42px
+		+r(991)
+			font-size: 34px
+		+r(767)
+			font-size: 26px
 	&__text
 		font-size: 17px
 		font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
 		line-height: 1.53
+		+r(991)
+			line-height: 1.2
+		+r(767)
+			font-size: 16px
 		.bold
 			font-weight: bold
 			text-transform: uppercase

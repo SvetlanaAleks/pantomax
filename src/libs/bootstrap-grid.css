@@ -4,13 +4,11 @@
   margin-right: auto;
   margin-left: auto;
 }
-
-@media (min-width: 576px) {
+@media (max-width: 767px) {
   .container {
-    width: 540px;
+    width: 320px;
   }
 }
-
 @media (min-width: 768px) {
   .container {
     width: 720px;

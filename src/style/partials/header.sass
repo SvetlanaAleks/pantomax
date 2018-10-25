@@ -14,9 +14,15 @@
 .header
 	padding-top: 27px
 	background: url(../img/header_back.png) no-repeat center top
-	background-size: contain
+	+r(767)
+		background-position-y: 50px
+		background-size: 700px
 	&__top
 		margin-bottom: 35px
+		+r(767)
+			max-width: 230px
+			width: 100%
+			margin: 0 auto 20px
 		.item
 			color: $white-two
 			font-size: 18px
@@ -24,6 +30,16 @@
 			margin-right: 30px
 			display: inline-block
 			vertical-align: middle
+			+r(991)
+				.logo
+					width: 150px
+			+r(767)
+				margin-right: auto
+				margin-left: auto
+				display: block
+				font-size: 14px
+				&:not(:last-of-type)
+					margin-bottom: 15px
 			a
 				display: inline-block
 			&--1, &--2
@@ -35,52 +51,97 @@
 					left: 0
 					top: 50%
 					transform: translateY(-50%)
+					+r(991)
+						transform: translateY(-50%) scale(.7)
+					+r(767)
+						transform: translateY(-50%) scale(.6)
 			&--1
 				padding-left: 35px
 				&::after
 					+sprite($icon1)
 			&--2
 				padding-left: 52px
+				+r(767)
+					padding-left: 40px
 				&::after
 					+sprite($icon2)
 			&:first-of-type
 				margin-right: 88px
+				+r(991)
+					margin-right: 30px
+				+r(767)
+					margin-right: auto
+
 			&:last-of-type
 				margin-right: 0
 		.bold
 			font-family: 'PTSans-Bold', Verdana, Geneva, Tahoma, sans-serif
 			font-size: 24px
+			+r(767)
+				font-size: 16px
 
 	&__bottom
 		.title
-			
 			font-size: 58px
 			color: $dandelion
 			font-weight: bold
 			font-family: 'RobotoCondensed-Bold', Verdana, Geneva, Tahoma, sans-serif
 			margin-bottom: 28px
 			text-transform: uppercase
+			+r(1199)
+				font-size: 52px
+			+r(991)
+				font-size: 38px
+			+r(767)
+				font-size: 26px
 		.cols
 			display: flex
+			+r(991)
+				position: relative
+			+r(767)
+				flex-wrap: wrap
 			.col
 				flex-grow: 1
 				flex-basis: 33.333%
+				+r(991)
+					flex-basis: 50%
+				+r(767)
+					flex-basis: 100%
 			.product
 				margin-right: 37px
 				max-width: 320px
 				width: auto
+				+r(1199)
+					img
+						max-width: 100%
+				+r(991)
+					margin-right: 195px
+				+r(767)
+					order: 1
+					margin-right: 0
+					img
+						max-width: 200px
+						display: block
+						margin: 0 auto 20px
 				&__title
 					font-family: 'Roboto-Medium', Verdana, Geneva, Tahoma, sans-serif
 					font-size: 22px
 					font-weight: 500
 					margin-bottom: 19px
+					+r(991)
+						font-size: 18px
 			.list
+				+r(767)
+					margin-bottom: 20px
 				&__item
 					font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
 					padding-left: 35px
 					position: relative
 					margin-bottom: 14px
 					padding-bottom: 16px
+					+r(991)
+						padding-bottom: 10px
+						margin-bottom: 10px
 					&:last-of-type
 						margin-bottom: 0
 						padding-bottom: 24px
@@ -90,7 +151,8 @@
 						position: absolute
 						bottom: 0
 						left: 0
-						width: 266px
+						right: 0
+						width: 100%
 						height: 1px
 						background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.2) 15%,rgba(2255,255,255,.4) 50%, rgba(2255,255,255,.2) 85%,rgba(255,255,255,0) 100%)
 					&::after
@@ -105,6 +167,34 @@
 				margin-bottom: 75px
 				text-align: center
 				align-self: flex-end
+				+r(991)
+					position: absolute
+					bottom: 0
+					left: 0
+					margin-bottom: 0
+					.text
+						font-size: 16px
+						width: 200px
+						box-sizing: content-box
+						padding-top: 0
+						padding-right: 190px
+						&::after
+							left: auto
+							right: 30px
+							top: 50%
+							transform: scale(.5) translate(50%, -100%)
+				+r(767)
+					order: 3
+					position: static
+					margin-right: 0
+					.text
+						box-sizing: border-box
+						width: 100%
+						padding-right: 100px
+						&::after
+							right: 0
+							top: 50%
+							transform: scale(.3) translate(120%, -170%)
 				.text
 					font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
 					font-size: 19px
@@ -120,9 +210,15 @@
 						margin: auto
 						+sprite($sale)
 			.order
+				+r(767)
+					order: 0
+					padding-top: 100px
+					margin-bottom: 40px
 				.timer
 					display: flex
 					margin-bottom: 30px
+					+r(767)
+						margin-bottom: 15px
 					&__count
 						white-space: nowrap
 						margin-right: 9px
@@ -158,7 +254,7 @@
 						font-size: 19px
 						font-family: 'PTSans-Narrow', Verdana, Geneva, Tahoma, sans-serif
 	.form
-		max-width: 290px
+		width: 290px
 		border-radius: 10px
 		box-shadow: 0 0 40px 0 rgba(254, 213, 91, 0.25)
 		background-color: #ffffff

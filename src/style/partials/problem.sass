@@ -10,10 +10,20 @@
 		text-transform: uppercase
 		font-family: 'PTSans-NarrowBold', Verdana, Geneva, Tahoma, sans-serif
 		margin-bottom: 22px
+		+r(991)
+			font-size: 38px
+			margin-bottom: 18px
+		+r(767)
+			font-size: 26px
 	&__text
 		font-size: 22px
 		font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
 		margin-bottom: 25px
+		+r(991)
+			font-size: 18px
+		+r(767)
+			font-size: 14px
+			margin-bottom: 15px
 	.block
 		font-family: 'PTSans-Regular', Verdana, Geneva, Tahoma, sans-serif
 		padding: 31px 60px 50px
@@ -25,10 +35,17 @@
 		width: 100%
 		text-transform: uppercase
 		font-weight: bold
+		+r(767)
+			padding: 10px
 		&__title
 			color: $black-three
 			font-size: 24px
 			margin-bottom: 60px
+			+r(991)
+				font-size: 20px
+				margin-bottom: 30px
+			+r(767)
+				font-size: 16px
 		.wrap
 			font-size: 0
 		&__btn
@@ -46,8 +63,17 @@
 			overflow: hidden
 			position: relative
 			transition: background-color .3s
+			+r(991)
+				font-size: 20px
+				min-width: 200px
+			+r(767)
+				font-size: 16px
+				line-height: 50px
 			&:not(:last-of-type)
 				margin-right: 20px
+				+r(767)
+					margin-right: 0
+					margin-bottom: 10px
 			&:hover
 				background-color: transparentize(#fc481a, .2)
 			&::after
@@ -58,6 +84,8 @@
 				right: 50%
 				transform: translate(50%, -50%)
 				+sprite($btn_back)
+				+r(767)
+					transform: translate(50%, -70%)
 		.num
 			margin-right: 15px
 			font-size: 30px
@@ -68,3 +96,10 @@
 			color: $black-three
 			border-radius: 50%
 			background-color: transparentize($black-three, .9)
+			+r(991)
+				font-size: 26px
+			+r(767)
+				font-size: 16px
+				width: 30px
+				line-height: 30px
+				margin-right: 5px
